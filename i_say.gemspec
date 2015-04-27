@@ -6,12 +6,12 @@ require 'i_say/version'
 Gem::Specification.new do |spec|
   spec.name          = "i_say"
   spec.version       = ISay::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["takuminnnn"]
+  spec.email         = ["skentaro36@gmail.com"]
 
   spec.summary       = %q{Customized say command}
   spec.description   = %q{Customized say command}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/takuminnnn"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
