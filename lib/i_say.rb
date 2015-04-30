@@ -1,6 +1,9 @@
 require "i_say/version"
+require "i_say/config"
 require "i_say/cli"
 
 module ISay
-  # Your code goes here...
+  class << self
+    # Your code goes here...
+  end
 end
