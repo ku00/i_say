@@ -13,5 +13,14 @@ module ISay
       sound = ISay.fetch_sound(word, config)
       Open3.capture3("/usr/local/bin/play -", :stdin_data => sound)
     end
+
+    desc "START:DASH!!", "sing START:DASH"
+    def sing
+      config = ISay::Config.new
+      lyric = ISay.get_song_lyric
+
+      sound = ISay.fetch_sound(lyric, config)
+      Open3.capture3("/usr/local/bin/play -", :stdin_data => sound)
+    end
   end
 end

@@ -17,5 +17,9 @@ module ISay
 
       voice_text.tts(word, speaker, volume: VOLUME)
     end
+
+    def get_song_lyric
+      "悲しみに閉ざされて 泣くだけの君じゃない 熱い胸 きっと未来を切り開く筈さ 悲しみに閉ざされて 泣くだけじゃつまらない きっと(きっと)君の(夢の) チカラ(いまを)動かすチカラ 信じてるよ…だからSTART!!"
+    end
   end
 end
