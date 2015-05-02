@@ -5,7 +5,7 @@ module ISay
     attr_reader :api_key
 
     def initialize
-      Dotenv.load
+      Dotenv.load! "~/.env"
       @api_key = ENV['VT_API_KEY']
     end
   end
