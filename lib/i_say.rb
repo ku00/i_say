@@ -5,7 +5,7 @@ require 'voice_text_api'
 
 module ISay
   class << self
-    SPEAKER = %i(haruka hikari takeru)
+    SPEAKER = %i(haruka hikari takeru santa bear)
     VOLUME  = 200
 
     def fetch_sound(word)
@@ -14,7 +14,7 @@ module ISay
       raise "ENV['VT_API_KEY'] is required" unless config.api_key
 
       voice_text = VoiceTextAPI.new(config.api_key)
-      speaker = SPEAKER[rand(3)]
+      speaker = SPEAKER[rand(5)]
 
       voice_text.tts(word, speaker, volume: VOLUME)
     end
