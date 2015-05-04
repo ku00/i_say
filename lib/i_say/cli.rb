@@ -8,18 +8,16 @@ module ISay
 
     desc "say", "say word"
     def say(word)
-      config = ISay::Config.new
+      sound = ISay.fetch_sound(word)
 
-      sound = ISay.fetch_sound(word, config)
       Open3.capture3("/usr/local/bin/play -", :stdin_data => sound)
     end
 
     desc "START:DASH!!", "sing START:DASH"
     def sing
-      config = ISay::Config.new
       lyric = ISay.get_song_lyric
 
-      sound = ISay.fetch_sound(lyric, config)
+      sound = ISay.fetch_sound(lyric)
       Open3.capture3("/usr/local/bin/play -", :stdin_data => sound)
     end
   end

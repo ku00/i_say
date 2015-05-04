@@ -1,6 +1,6 @@
 require "i_say/version"
-require "i_say/config"
 require "i_say/cli"
+require "i_say/config"
 require 'voice_text_api'
 
 module ISay
@@ -8,7 +8,8 @@ module ISay
     SPEAKER = %i(haruka hikari takeru)
     VOLUME  = 200
 
-    def fetch_sound(word, config)
+    def fetch_sound(word)
+      config = ISay::Config.new
       # return unless word
       raise "ENV['VT_API_KEY'] is required" unless config.api_key
 
